@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Box } from "./Box/Box";
+import { GlobalStyle } from "GlobalStyle";
 
 import SearchBar from "./SearchBar";
 import API from "./Services/Services";
@@ -45,6 +46,7 @@ const App = () => {
         <ImageGallery items={arrayItems} />
         {loading ? <Loader /> : <Button loadMore={() => setPage(page + 1)} />}
         </>}
+      <GlobalStyle />
     </Box>
   );
 };
